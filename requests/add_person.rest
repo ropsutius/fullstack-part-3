@@ -1,0 +1,7 @@
+POST https://cold-violet-2597.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "Matti",
+    "number": "12345"
+}
