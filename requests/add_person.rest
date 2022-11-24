@@ -1,7 +1,7 @@
-POST https://cold-violet-2597.fly.dev/api/persons
+POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-    "name": "Matti",
+    "name": "Matti1",
     "number": "12345"
 }
