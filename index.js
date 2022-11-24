@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
+const Person = require('./models/person');
 const app = express();
 
 app.use(cors());
@@ -48,7 +50,9 @@ let phonebook = [
 const getRandomId = () => Math.round(Math.random() * 1000000);
 
 app.get('/api/persons', (req, res) => {
-  res.json(phonebook);
+  Person.find({}).then((persons) => {
+    res.json(persons);
+  });
 });
 
 app.get('/api/persons/:id', (req, res) => {
