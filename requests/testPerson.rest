@@ -1,0 +1,43 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "1",
+    "number": "12345"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Matti",
+    "number": "123-4564"
+}
+
+###
+
+GET http://localhost:3001/api/persons/63809f8d913da936deefb6d4
+
+###
+
+PUT http://localhost:3001/api/persons/badID
+
+###
+
+PUT http://localhost:3001/api/persons/63809f8d913da936deefb6d4
+Content-Type: application/json
+
+{
+    "name": "Matti",
+    "number": "67890"
+}
+
+###
+
+DELETE http://localhost:3001/api/persons/badID
+
+###
+
+DELETE http://localhost:3001/api/persons/63809f8d913da936deefb6d4
