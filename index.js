@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('build'));
 
-morgan.token('person', (req, res) => {
+morgan.token('person', (req) => {
   console.log(req.body);
   if (
     req.body &&
